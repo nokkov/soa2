@@ -18,6 +18,7 @@ import java.util.Properties;
 public class DatabaseManager {
 
     private HikariDataSource dataSource;
+    private String schema;
 
     @PostConstruct
     public void init() {
@@ -32,7 +33,9 @@ public class DatabaseManager {
             config.setJdbcUrl(properties.getProperty("db.url"));
             config.setUsername(properties.getProperty("db.user"));
             config.setPassword(properties.getProperty("db.password"));
-            
+            config.setMaximumPoolSize(Integer.parseInt(properties.getProperty("db.poolSize")));
+            schema = properties.getProperty("db.schema");
+
             dataSource = new HikariDataSource(config);
         } catch (IOException e) {
             throw new RuntimeException("Failed to load database properties", e);
@@ -40,7 +43,9 @@ public class DatabaseManager {
     }
 
     public Connection getConnection() throws SQLException {
-        return dataSource.getConnection();
+        Connection connection = dataSource.getConnection();
+        connection.setSchema(schema);
+        return connection;
     }
 
     @PreDestroy
