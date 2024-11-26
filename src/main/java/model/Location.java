@@ -1,4 +1,4 @@
-package ru.itmo.model;
+package model;
 
 public class Location {
     private Double x; //Поле не может быть null

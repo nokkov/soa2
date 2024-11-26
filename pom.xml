@@ -9,19 +9,29 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <javaee-api.version>8.0</javaee-api.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <javaee-api.version>8.0</javaee-api.version>
   </properties>
 
   <dependencies>
 
+    <!-- JUnit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- Lombok -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.24</version>
+      <scope>provided</scope>
+    </dependency>
+
 
     <!-- JAX-RS API -->
     <dependency>
@@ -37,6 +47,20 @@
         <artifactId>javaee-api</artifactId>
         <version>${javaee-api.version}</version>
         <scope>provided</scope>
+    </dependency>
+
+    <!-- PostgreSQL Driver -->
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <version>42.2.18</version>
+    </dependency>
+
+    <!-- HikariCP for connection pooling -->
+    <dependency>
+        <groupId>com.zaxxer</groupId>
+        <artifactId>HikariCP</artifactId>
+        <version>3.4.5</version>
     </dependency>
 
   </dependencies>

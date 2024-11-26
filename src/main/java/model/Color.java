@@ -1,4 +1,4 @@
-package ru.itmo.model;
+package model;
 
 public enum Color {
     GREEN,

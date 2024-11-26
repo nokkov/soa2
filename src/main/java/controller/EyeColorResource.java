@@ -1,4 +1,4 @@
-package ru.itmo.controller;
+package controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

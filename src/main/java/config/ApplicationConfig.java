@@ -1,4 +1,4 @@
-package ru.itmo.config;
+package config;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
