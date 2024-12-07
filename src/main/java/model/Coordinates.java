@@ -3,9 +3,9 @@ package model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.Min;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import javax.validation.constraints.*;
 
 @Getter
 @Setter

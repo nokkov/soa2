@@ -38,42 +38,46 @@
         <scope>provided</scope>
     </dependency>
 
-    <!-- JAX-RS API -->
     <dependency>
-        <groupId>javax.ws.rs</groupId>
-        <artifactId>javax.ws.rs-api</artifactId>
-        <version>2.1</version>
+        <groupId>jakarta.platform</groupId>
+        <artifactId>jakarta.jakartaee-api</artifactId>
+        <version>9.1.0</version>
         <scope>provided</scope>
     </dependency>
-
-    <!-- Java EE API -->
     <dependency>
-        <groupId>javax</groupId>
-        <artifactId>javaee-api</artifactId>
-        <version>${javaee-api.version}</version>
-        <scope>provided</scope>
+        <groupId>org.glassfish.jersey.containers</groupId>
+        <artifactId>jersey-container-servlet</artifactId>
+        <version>3.0.4</version>
     </dependency>
-
-    <!-- CDI dependency -->
     <dependency>
-        <groupId>javax.enterprise</groupId>
-        <artifactId>cdi-api</artifactId>
-        <version>2.0</version>
-        <scope>provided</scope>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-json-jackson</artifactId>
+        <version>3.0.4</version>
     </dependency>
-
-    <!-- JPA dependency -->
     <dependency>
-        <groupId>javax.persistence</groupId>
-        <artifactId>javax.persistence-api</artifactId>
-        <version>2.2</version>
+        <groupId>org.glassfish.jersey.inject</groupId>
+        <artifactId>jersey-hk2</artifactId>
+        <version>3.0.4</version>
     </dependency>
-
-    <!-- Hibernate dependency -->
     <dependency>
-        <groupId>org.hibernate</groupId>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+        <version>3.0.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate.orm</groupId>
         <artifactId>hibernate-core</artifactId>
-        <version>5.4.30.Final</version>
+        <version>6.0.2.Final</version>
+    </dependency>
+    <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>3.0.2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate.validator</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>7.0.5.Final</version>
     </dependency>
 
     <!-- PostgreSQL Driver -->
